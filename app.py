@@ -49,13 +49,12 @@ def register():
     return render_template('register.html')
 
 @app.route('/login', methods=['GET', 'POST'])
-@login_required
 def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
 
-        # Check if the email and password match the hardcoded admin credentials
+        # Check if the email and password match the admin credentials
         if email == "admin@gmail.com" and password == "admin123":
             admin = User.query.filter_by(email=email).first()
 
