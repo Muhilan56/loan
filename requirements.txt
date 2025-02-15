@@ -1,6 +1,7 @@
 Flask
 Flask-Login
 Flask-SQLAlchemy
+flask_bcrypt
 Flask-WTF
 Werkzeug
 gunicorn
