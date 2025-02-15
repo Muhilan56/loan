@@ -5,5 +5,6 @@ flask_bcrypt
 Flask-WTF
 Werkzeug
 gunicorn
+flask_mail
 python-dotenv
 bcrypt
