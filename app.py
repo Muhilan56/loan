@@ -32,7 +32,9 @@ class User(db.Model, UserMixin):
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -46,7 +48,7 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html')
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 @login_required
 def login():
     if request.method == 'POST':
